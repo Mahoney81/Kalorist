@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kalorist</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainWindow.qrc">
+    <normaloff>:/icons/bananas-icon</normaloff>:/icons/bananas-icon</iconset>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonTextBesideIcon</enum>
+  </property>
+  <property name="documentMode">
+   <bool>true</bool>
+  </property>
+  <property name="dockOptions">
+   <set>QMainWindow::AnimatedDocks</set>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="TabWidget" name="pTabWidget">
+      <property name="documentMode">
+       <bool>true</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="pMenuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="pMenuMenu">
+    <property name="title">
+     <string>&amp;Menu</string>
+    </property>
+    <addaction name="pNewMenuAction"/>
+    <addaction name="pOpenMenuAction"/>
+    <addaction name="pRenameMenuAction"/>
+    <addaction name="pCloseMenuAction"/>
+    <addaction name="separator"/>
+    <addaction name="pExportAction"/>
+    <addaction name="separator"/>
+    <addaction name="pExitAction"/>
+   </widget>
+   <widget class="QMenu" name="pRecordMenu">
+    <property name="title">
+     <string>&amp;Record</string>
+    </property>
+    <addaction name="pRecordAddAction"/>
+    <addaction name="pRecordDeleteAction"/>
+    <addaction name="pRecordDeleteAllAction"/>
+    <addaction name="separator"/>
+    <addaction name="pRecordCopyToAction"/>
+    <addaction name="pRecordMoveToAction"/>
+   </widget>
+   <widget class="QMenu" name="pHelpMenu">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="pAboutQtAction"/>
+    <addaction name="pAboutAction"/>
+   </widget>
+   <addaction name="pMenuMenu"/>
+   <addaction name="pRecordMenu"/>
+   <addaction name="pHelpMenu"/>
+  </widget>
+  <widget class="QToolBar" name="pToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="pNewMenuAction"/>
+   <addaction name="pOpenMenuAction"/>
+   <addaction name="pRenameMenuAction"/>
+   <addaction name="separator"/>
+   <addaction name="pRecordAddAction"/>
+   <addaction name="pRecordDeleteAction"/>
+   <addaction name="pRecordCopyToAction"/>
+   <addaction name="pRecordMoveToAction"/>
+  </widget>
+  <widget class="QStatusBar" name="pStatusBar"/>
+  <action name="pExitAction">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+  </action>
+  <action name="pRecordAddAction">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/icons/new-icon</normaloff>:/icons/new-icon</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Add Record</string>
+   </property>
+   <property name="toolTip">
+    <string>Add new record</string>
+   </property>
+   <property name="statusTip">
+    <string>Add new record</string>
+   </property>
+   <property name="shortcut">
+    <string>Ins</string>
+   </property>
+  </action>
+  <action name="pRecordDeleteAction">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/icons/delete-icon</normaloff>:/icons/delete-icon</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete Record</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete selected record</string>
+   </property>
+   <property name="statusTip">
+    <string>Delete selected record</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="pRecordDeleteAllAction">
+   <property name="text">
+    <string>De&amp;lete All Records</string>
+   </property>
+   <property name="toolTip">
+    <string>Delete all records from current list</string>
+   </property>
+   <property name="statusTip">
+    <string>Delete all records from current list</string>
+   </property>
+  </action>
+  <action name="pAboutQtAction">
+   <property name="text">
+    <string>About &amp;Qt...</string>
+   </property>
+  </action>
+  <action name="pAboutAction">
+   <property name="text">
+    <string>&amp;About</string>
+   </property>
+  </action>
+  <action name="pExportAction">
+   <property name="text">
+    <string>&amp;Export...</string>
+   </property>
+  </action>
+  <action name="pNewMenuAction">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/icons/add-menu-icon</normaloff>:/icons/add-menu-icon</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New Menu...</string>
+   </property>
+   <property name="toolTip">
+    <string>Create New Menu</string>
+   </property>
+   <property name="statusTip">
+    <string>Create New Menu</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="pOpenMenuAction">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/icons/open-file-icon</normaloff>:/icons/open-file-icon</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open Menu...</string>
+   </property>
+   <property name="toolTip">
+    <string>Open Existing Menu</string>
+   </property>
+   <property name="statusTip">
+    <string>Open Existing Menu</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="pRenameMenuAction">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/icons/rename-icon</normaloff>:/icons/rename-icon</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Rename Menu...</string>
+   </property>
+   <property name="statusTip">
+    <string>Rename Menu</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F6</string>
+   </property>
+  </action>
+  <action name="pCloseMenuAction">
+   <property name="text">
+    <string>&amp;Close Menu</string>
+   </property>
+   <property name="toolTip">
+    <string>Close Current Menu</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F4</string>
+   </property>
+  </action>
+  <action name="pRecordCopyToAction">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/icons/copy-icon</normaloff>:/icons/copy-icon</iconset>
+   </property>
+   <property name="text">
+    <string>Copy Record...</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy record to another menu</string>
+   </property>
+   <property name="statusTip">
+    <string>Copy record to another menu</string>
+   </property>
+   <property name="shortcut">
+    <string>F5</string>
+   </property>
+  </action>
+  <action name="pRecordMoveToAction">
+   <property name="icon">
+    <iconset resource="MainWindow.qrc">
+     <normaloff>:/icons/move-icon</normaloff>:/icons/move-icon</iconset>
+   </property>
+   <property name="text">
+    <string>Move Record...</string>
+   </property>
+   <property name="toolTip">
+    <string>Move record to another menu</string>
+   </property>
+   <property name="statusTip">
+    <string>Move record to another menu</string>
+   </property>
+   <property name="shortcut">
+    <string>F6</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>TabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>TabWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MainWindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

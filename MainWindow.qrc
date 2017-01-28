@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="rename-icon">Resources/rename-icon.png</file>
+        <file alias="delete-icon">Resources/delete-icon.png</file>
+        <file alias="new-icon">Resources/new-icon.png</file>
+        <file alias="add-tab-icon">Resources/add-tab-icon.png</file>
+        <file alias="move-icon">Resources/move-icon.png</file>
+        <file alias="open-file-icon">Resources/open-file-icon.png</file>
+        <file alias="copy-icon">Resources/copy-icon.png</file>
+        <file alias="add-menu-icon">Resources/add-menu-icon.png</file>
+        <file alias="bananas-icon">Resources/bananas-icon.png</file>
+    </qresource>
+    <qresource prefix="/translations">
+        <file alias="kalorist_ru">kalorist_ru.qm</file>
+        <file alias="qtbase_ru">qtbase_ru.qm</file>
+    </qresource>
+    <qresource prefix="/products">
+        <file alias="products_en_US">products_en_US.xml</file>
+        <file alias="products_ru_RU">products_ru_RU.xml</file>
+    </qresource>
+</RCC>

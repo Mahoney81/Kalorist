@@ -1,0 +1,1 @@
+An app to calculate energy in a menu based on energy info printing of the food package.
